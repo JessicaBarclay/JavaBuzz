@@ -15,3 +15,16 @@ JavaBuzz.prototype.isDivisibleByFive = function (number) {
 JavaBuzz.prototype.isDivisibleByThree = function (number) {
   return this._isDivisibleBy(number, 3);
 };
+
+JavaBuzz.prototype.says = function (number) {
+    if (this.isDivisibleByFifteen(number)) {
+      return 'JavaBuzz';
+    }
+    if (this.isDivisibleByFive(number)) {
+      return 'Buzz';
+    }
+    if (this.isDivisibleByThree(number)) {
+      return 'Java';
+    }
+    return number;
+};
